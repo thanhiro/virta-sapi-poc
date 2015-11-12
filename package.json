@@ -9,15 +9,20 @@
   "author": "thanhiro",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.1.2",
-    "babel-plugin-syntax-async-functions": "^6.0.14",
-    "babel-plugin-syntax-async-generators": "^6.0.15",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.1.3",
-    "babel-preset-es2015": "^6.1.2",
-    "babel-preset-stage-0": "^6.1.2",
+    "babel-core": "^6.1.4",
+    "babel-plugin-syntax-async-functions": "^6.1.4",
+    "babel-plugin-syntax-async-generators": "^6.1.4",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.1.4",
+    "babel-plugin-transform-es2015-parameters": "^6.1.4",
+    "babel-preset-es2015": "^6.1.4",
+    "babel-preset-stage-0": "^6.1.2"
+  },
+  "dependencies": {
+    "data2xml": "^1.2.2",
+    "highland": "^2.5.1",
     "koa": "^2.0.0-alpha.3",
-    "koa-66": "^0.6.0",
-    "mssql": "^2.3.1",
+    "koa-66": "^0.6.1",
+    "mssql": "^2.3.2",
     "nodemon": "^1.8.1",
     "streaming-json-stringify": "^3.1.0"
   }

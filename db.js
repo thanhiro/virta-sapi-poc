@@ -1,13 +1,13 @@
 import sql from 'mssql';
 
 const config = {
-    user: '<user>',
-    password: '<password>',
-    server: '<ip>',
-    database: '<db>',
+    user: 'timoh',
+    password: 'Rovaniemi2016',
+    server: '10.12.9.153',
+    database: 'csc_hanhirova',
 
     options: {
-        encrypt: false
+        //encrypt: false
     }
 };
 
@@ -18,4 +18,16 @@ conn.on('error', err => {
     console.log(err);
 });
 
-module.exports = {sql, conn, pool};
+let db = {
+    conn,
+    request: (isStream = true) => {
+        return pool.then(() => {
+            let request = new sql.Request(conn);
+            request.stream = isStream;
+            return request;
+        });
+        //error handling here...
+    }
+};
+
+export {db};
